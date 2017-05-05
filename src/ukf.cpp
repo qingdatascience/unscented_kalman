@@ -203,11 +203,12 @@ void UKF::ProcessMeasurement(MeasurementPackage meas_package) {
 
  double UKF::NormalizeAngle(double& pValue)
 {
-  if (fabs(pValue) > M_PI)
+  /*if (fabs(pValue) > M_PI)
   {
     double pValue_n = fmod(pValue, M_PI);
     return pValue_n;
-  }
+  } */
+  return pValue;
   
 } 
 
